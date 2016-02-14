@@ -31,7 +31,7 @@
 	  views: {
 	    'tab-chats': {
 	      templateUrl: 'templates/tab-chats.html',
-	      controller: 'Task'
+	      controller: 'Task as vm'
 	    }
 	  }
 	})
@@ -60,7 +60,7 @@
        .state('access',{
 	 url: '/access',
 	 templateUrl: 'js/access/index.html',
-	 controller: 'Access'
+	 controller: 'Access as vm'
        });
 
   // if none of the above states are matched, use this as the fallback
