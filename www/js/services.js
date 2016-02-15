@@ -46,5 +46,5 @@ angular.module('redmine.services', [])
       }
       return null;
     }
-  };
+  }
 });

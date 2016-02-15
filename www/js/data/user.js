@@ -17,13 +17,18 @@
       $resource('http://redmine.tron.com.br:3000/login', {}, {
 	login : {
 	  method: 'POST', isArray: false,
-	  transformResponse: function (resposeData, headers) {
-	    var resposeHeaders = headers();
-	    return resposeData;
+	  headers : {'Content-Type': 'application/x-www-form-urlencoded'},
+	  transformResponse: function (responseData, headers) {
+	    var responseHeaders = headers();
+	    console.log('i dont thing that is a good idea get all headrs');
+	    console.log(responseHeaders);
+	    return responseData;
 	  }
 	}
       });
 
+      console.log('bad romance');
+      console.log(user);
       return userRedmine.login(user).$promise;
     }
 }

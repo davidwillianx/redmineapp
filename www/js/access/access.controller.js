@@ -3,17 +3,23 @@
   angular.module('redmine.access')
   .controller('Access', Access);
 
+  Access.$inject = ['$scope', 'User', '$state'];
 
-  Access.$inject = ['$scope'];
-  
+  function Access($scope, UserProvider, $state){
+	  var vm = this;
 
-  function Access($scope){
-    var vm = this;
-    vm.name = 'atividade';
+	  vm.signIn  = _access;
 
-    vm.signIn = function(){
-      console.log('fdsafsadkj');
-    };
-  
+
+	  /// concrete execution
+
+
+	  function _access(userToAccess){
+		  UserProvider.login(userToAccess)
+			  .then(function(accessStatus){
+				  $state.go('tab.chats');
+			  });
+	  }
   }
+
 })();

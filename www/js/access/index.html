@@ -3,7 +3,7 @@
     <div class="list">
       <label class="item item-input">
 	<span class="input-label">Username</span>
-	<input type="text" ng-model="user.username">
+	<input type="text" ng-model="user.username" autofocus>
       </label>
       <label class="item item-input">
 	<span class="input-label">Password</span>
@@ -11,9 +11,7 @@
       </label>
     </div>
     <div class="padding">
-      {{vm.name}}
-      <button class="button button-block button-positive"
-	ng-click="vm.signIn(user)">
+      <button class="button button-block button-positive" ng-click="vm.signIn(user)">
           Sign-In
       </button>
       <p class="text-center">

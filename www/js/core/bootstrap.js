@@ -1,10 +1,9 @@
 (function(){
   'use strict';
   angular.module('redmine.core',
-    ['ionic', 'redmine.properties'])
+    ['ionic', 'ngResource', 'redmine.properties'])
 
   .run(['$ionicPlatform', 'Ini', function($ionic, ini){
       ini.bootstrap($ionic);
-  }]);
-
+  }])
 })();
