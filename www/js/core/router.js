@@ -51,7 +51,7 @@
 	  views: {
 	    'tab-account': {
 	      templateUrl: 'templates/tab-account.html',
-	      controller: 'Account'
+	      controller: 'Account as vm'
 	    }
 	 }
        })

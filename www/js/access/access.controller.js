@@ -8,6 +8,12 @@
   
 
   function Access($scope){
+    var vm = this;
+    vm.name = 'atividade';
+
+    vm.signIn = function(){
+      console.log('fdsafsadkj');
+    };
   
   }
 })();
